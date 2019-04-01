@@ -1,0 +1,16 @@
+[
+{
+  "modid": "jeidsi",
+  "name": "JustEnoughIDs Integration",
+  "description": "Enhances compatibility between JustEnoughIDs and other mods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BobbyTables"],
+  "credits": "DimensionalDevelopment Team",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["jeid"]
+}
+]

@@ -1,0 +1,92 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://files.minecraftforge.net/maven' }
+        maven { url 'http://repo.spongepowered.org/maven' }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath 'org.spongepowered:mixingradle:0.6-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'org.spongepowered.mixin'
+
+def buildnumber = System.getenv('TRAVIS_BUILD_NUMBER')
+def suffix = buildnumber != null ? ".$buildnumber" : "-SNAPSHOT"
+version = "1.0.0$suffix"
+group = "uk.bobbytables.jeidsi" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "jeidsi"
+
+sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version "1.12.2-14.23.5.2815"
+    runDir "run"
+    mappings "stable_39"
+    makeObfSourceJar false // an Srg named sources jar is made by default. uncomment this to disable.
+
+    def args = [
+            '-Dfml.coreMods.load=uk.bobbytables.jeidsi.JEIDsILoadingPlugin',
+            '-Dmixin.hotSwap=true',
+            '-Dmixin.checks.interfaces=true'
+    ]
+    clientJvmArgs.addAll(args)
+    serverJvmArgs.addAll(args)
+}
+
+repositories {
+    mavenLocal()
+    
+    maven { url 'https://www.dimdev.org/maven'}
+
+    ivy {
+        url 'https://google.com/404'
+        ivyPattern('https://google.com/404')
+        artifactPattern("https://media.forgecdn.net/files/[organisation]/[module]/[revision].[ext]")
+    }
+}
+
+dependencies {
+    compileOnly 'org.dimdev:mixin:0.7.11-SNAPSHOT'
+    compileOnly '2626:479:JustEnoughIDs-1.0.2-26@jar'
+    
+    compileOnly '2691:339:AbyssalCraft-1.12.2-1.9.6@jar'
+    compileOnly '2683:823:Bookshelf-1.12.2-2.3.577@jar'
+    compileOnly "2686:476:twilightforest-1.12.2-3.9.888-universal@jar"
+}
+
+mixin {
+    add sourceSets.main, "mixins.jeidsi.refmap.json"
+}
+
+jar {
+    manifest.attributes(
+            "FMLCorePluginContainsFMLMod": "true",
+            "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+            "FMLCorePlugin": "uk.bobbytables.jeidsi.JEIDsILoadingPlugin",
+            "ForceLoadAsMod": "true"
+    )
+}
+
+processResources {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else except the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

@@ -1,0 +1,30 @@
+language: java
+jdk: oraclejdk8
+
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -rf $HOME/.gradle/caches/*/plugin-resolution/
+  - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json
+  - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json.etag
+  - rm -rf  $HOME/.gradle/caches/minecraft/deobfedDeps
+  - rm -f $HOME/.gradle/caches/*/fileHashes/fileHashes.bin
+  - rm -f $HOME/.gradle/caches/*/fileHashes/fileHashes.lock
+
+cache:
+  directories:
+  - "$HOME/.gradle/caches"
+  - "$HOME/.gradle/wrapper"
+  - "$HOME/.m2/repository"
+
+install: "./gradlew setupCIWorkspace"
+script: "./gradlew clean build"
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: w7hJ6+wtexnkItn4rJUinxTSTFhzINv62kcl4I+oLId27P6YVnoB3QV6eutQlYT1hmHNJFcSeG8F4K2Q7I/K6LIzwQHvrZaMU170tV+3BKzlYHa9DUU0AqZtfJjP89jtdWFkxODfakaWJgJBswwwMcwp9Uq2WGJVSAE4aI+TOiwUqxjkXjm6j14Kl9Q8f2blxXlHWfPT/DE3fmSguuT961JE33DwloCaAi5nNHkq+LJLycvG3wI29urCzePdgsIhbweL7+cDUTT0POyorCT/XjrTQT8DGAmnNNzyyV9qnyg5tHFbezhqRm4Yu/vcXHN/8GSYFQwyKREI3r+603ngnziCmgCooRShyZqLKKa2c21P2eOeE9y5W3iCOmmB+jGcGjrPkImSXdb/PymqWfrvq9PNmP7IJy88TjQYBt8ftaZXBF4XC2vVTls4XLJJ3e1CNzj6fpmgRdJ2jb065K2YJ714I9H6w2a4GirzIXq+9EzYNlDV9lcux9E/7GvP16ow7S+n5ZFiwwk6ChBvHu5HIYsAO/30qao3984+EAmXvyeKfN4fVbX4oJsK523aFQOkV+E9qNkH/57LgwKVmrgrWqDLwXfUiiV89V7JBeDCaYlBZviVumT34w2Ndncp4Q00mMMvLxHS26swuNZBwpaimGWqD57OOrY41QhBivWYU0E=
+  file_glob: true
+  file: $TRAVIS_BUILD_DIR/build/libs/*
+  on:
+    tags: true

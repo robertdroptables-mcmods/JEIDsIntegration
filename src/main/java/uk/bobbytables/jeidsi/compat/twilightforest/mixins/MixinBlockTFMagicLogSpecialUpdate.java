@@ -26,7 +26,7 @@ public class MixinBlockTFMagicLogSpecialUpdate {
         IMessage message = new BiomeChangeMessage(pos.getX(), pos.getZ(), Biome.getIdForBiome(biome));
         MessageManager.CHANNEL.sendToAllAround(
                 message,
-                new NetworkRegistry.TargetPoint(world.provider.getDimension(),pos.getX(), 128.0D, pos.getZ(), 128.0D)
+                new NetworkRegistry.TargetPoint(world.provider.getDimension(), pos.getX(), 128.0D, pos.getZ(), 128.0D)
         );
     }
 }

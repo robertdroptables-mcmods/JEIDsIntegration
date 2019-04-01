@@ -23,9 +23,10 @@ public class TwilightForestPlugin implements IMixinConfigPlugin {
     
     @Override
     public boolean shouldApplyMixin(String s, String s1) {
+        JEIDsILoadingPlugin.LOGGER.info("Testing " + s1);
         for (ModContainer mod : Loader.instance().getModList()) {
             if (mod.getModId().equals("twilightforest")) {
-                if (s1.equals("MixinBlockTFMagicLogSpecialUpdate")) {
+                if (s1.equals("uk.bobbytables.jeidsi.compat.twilightforest.mixins.MixinBlockTFMagicLogSpecialUpdate")) {
                     if (Integer.parseInt(mod.getVersion().split("[.]")[2]) > 689) {
                         JEIDsILoadingPlugin.LOGGER.info("Applying TF Network Mixin");
                         return true;

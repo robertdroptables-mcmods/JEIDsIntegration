@@ -8,6 +8,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "mixins.MixinBlockTFMagicLogSpecialUpdate",
-    "mixins.MixinBlockTFMagicLogSpecial"
+    "mixins.MixinBlockTFMagicLogSpecial",
+    "mixins.MixinGenLayerTFRiverMix"
   ]
 }

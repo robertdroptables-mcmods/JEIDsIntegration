@@ -19,6 +19,10 @@ public class MixinLoader {
             remap = false
     )
     private void beforeModSupportMixins(List<String> injectedModContainers, CallbackInfo ci) {
-        Mixins.addConfigurations("mixins.jeidsi.abyssalcraft.json", "mixins.jeidsi.bookshelf.json", "mixins.jeidsi.twilightforest.json");
+        Mixins.addConfiguration("mixins.jeidsi.abyssalcraft.json");
+        Mixins.addConfiguration("mixins.jeidsi.bookshelf.json");
+        Mixins.addConfiguration("mixins.jeidsi.thebetweenlands.json");
+        Mixins.addConfiguration("mixins.jeidsi.tropicraft.json");
+        Mixins.addConfiguration("mixins.jeidsi.twilightforest.json");
     }
 }

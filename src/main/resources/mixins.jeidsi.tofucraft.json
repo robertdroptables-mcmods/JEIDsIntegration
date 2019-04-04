@@ -1,11 +1,12 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.tropicraft",
+  "package": "uk.bobbytables.jeidsi.compat.tofucraft",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",
   "minVersion": "0.6",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "mixins.MixinGenLayerTropiVoronoiZoom"
+    "mixins.MixinGenLayerTofuVoronoiZoom",
+    "mixins.MixinGenLayerRiverMix"
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "package": "uk.bobbytables.jeidsi.compat.thebetweenlands",
+  "required": true,
+  "refmap": "mixins.jeidsi.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.6",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "mixins.MixinBlockSpreadingDeath",
+    "mixins.MixinGenLayerVoronoiZoomInstanced"
+  ]
+}

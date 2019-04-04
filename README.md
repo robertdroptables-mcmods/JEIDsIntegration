@@ -1,4 +1,4 @@
-# JustEnoughIDs Integration
+# JustEnoughIDs Integration [![Build Status](https://travis-ci.org/robertdroptables-mcmods/JEIDsIntegration.svg?branch=master)](https://travis-ci.org/robertdroptables-mcmods/JEIDsIntegration)
 This mod exists to provide enhanced mod support to JustEnoughIDs outside
 of their release cycle. The Dimensional Development team are welcome to
 incorporate any parts of this mod into their own.

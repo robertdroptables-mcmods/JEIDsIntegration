@@ -7,9 +7,9 @@ This mod exists to improve the compatibility between JustEnoughIDs and other mod
 * CyclopsCore
 * Extra Utilities 2
 * The Betweenlands
-*TofuCraft Reload
-*Tropicraft
-*Twilight Forest
+* TofuCraft Reload
+* Tropicraft
+* Twilight Forest
 
 ## Fixes Incorporated
 ### AbyssalCraft

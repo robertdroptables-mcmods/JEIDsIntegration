@@ -19,6 +19,11 @@ public class MixinLoader {
             remap = false
     )
     private void beforeModSupportMixins(List<String> injectedModContainers, CallbackInfo ci) {
+        // JEID does not apply any of its modsupport mixins when running on a dedicated server.
+        // This config enables a selection of them
+        Mixins.addConfiguration("mixins.jeid.server.modsupport.json");
+
+        // Now add our own configs
         Mixins.addConfiguration("mixins.jeidsi.abyssalcraft.json");
         Mixins.addConfiguration("mixins.jeidsi.bookshelf.json");
         Mixins.addConfiguration("mixins.jeidsi.cyclopscore.json");

@@ -14,7 +14,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 def buildnumber = System.getenv('TRAVIS_BUILD_NUMBER')
 def suffix = buildnumber != null ? ".$buildnumber" : "-SNAPSHOT"
-version = "1.1.0$suffix"
+version = "1.2.0$suffix"
 group = "uk.bobbytables.jeidsi" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "jeidsi"
 
@@ -28,6 +28,9 @@ minecraft {
     runDir "run"
     mappings "stable_39"
     makeObfSourceJar false // an Srg named sources jar is made by default. uncomment this to disable.
+
+    replaceIn "JEIDsI.java"
+    replace "@VERSION@", project.version
 
     def args = [
             '-Dfml.coreMods.load=uk.bobbytables.jeidsi.JEIDsILoadingPlugin',
@@ -56,6 +59,7 @@ dependencies {
     
     compileOnly '2691:339:AbyssalCraft-1.12.2-1.9.6@jar'
     compileOnly '2683:823:Bookshelf-1.12.2-2.3.577@jar'
+    compileOnly '2691:93:CyclopsCore-1.12.2-1.1.1@jar'
     compileOnly '2678:374:extrautils2-1.12-1.9.9@jar'
     compileOnly '2683:667:TheBetweenlands-3.4.6-universal@jar'
     compileOnly '2692:524:TofuCraftReload-0.0.2.1@jar'

@@ -21,6 +21,7 @@ public class MixinLoader {
     private void beforeModSupportMixins(List<String> injectedModContainers, CallbackInfo ci) {
         Mixins.addConfiguration("mixins.jeidsi.abyssalcraft.json");
         Mixins.addConfiguration("mixins.jeidsi.bookshelf.json");
+        Mixins.addConfiguration("mixins.jeidsi.extrautils2.json");
         Mixins.addConfiguration("mixins.jeidsi.tofucraft.json");
         Mixins.addConfiguration("mixins.jeidsi.thebetweenlands.json");
         Mixins.addConfiguration("mixins.jeidsi.tropicraft.json");

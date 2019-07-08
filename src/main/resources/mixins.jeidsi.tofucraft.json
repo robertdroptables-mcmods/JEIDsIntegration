@@ -1,5 +1,5 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.tofucraft",
+  "package": "uk.bobbytables.jeidsi.core.compat.tofucraft",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",

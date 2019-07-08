@@ -1,5 +1,5 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.bookshelf",
+  "package": "uk.bobbytables.jeidsi.core.compat.bookshelf",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",

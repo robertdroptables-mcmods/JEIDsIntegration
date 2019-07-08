@@ -6,7 +6,9 @@ This mod exists to improve the compatibility between JustEnoughIDs and other mod
 * Bookshelf
 * CyclopsCore
 * Extra Utilities 2
+* HammerCore
 * The Betweenlands
+* The Creeping Nether
 * TofuCraft Reload
 * Tropicraft
 * Twilight Forest

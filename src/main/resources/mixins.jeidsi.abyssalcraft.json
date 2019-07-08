@@ -1,5 +1,5 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.abyssalcraft",
+  "package": "uk.bobbytables.jeidsi.core.compat.abyssalcraft",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",
@@ -7,8 +7,5 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "mixins.MixinBiomeUtil"
-  ],
-  "client": [
-    "mixins.MixinCleansingRitualMessage"
   ]
 }

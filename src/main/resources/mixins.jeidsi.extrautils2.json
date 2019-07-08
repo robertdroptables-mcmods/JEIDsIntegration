@@ -1,5 +1,5 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.extrautils2",
+  "package": "uk.bobbytables.jeidsi.core.compat.extrautils2",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",

@@ -1,5 +1,5 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.cyclopscore",
+  "package": "uk.bobbytables.jeidsi.core.compat.cyclopscore",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",

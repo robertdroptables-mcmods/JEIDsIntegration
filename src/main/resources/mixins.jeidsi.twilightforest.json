@@ -1,6 +1,6 @@
 {
-  "package": "uk.bobbytables.jeidsi.compat.twilightforest",
-  "plugin": "uk.bobbytables.jeidsi.compat.twilightforest.TwilightForestPlugin",
+  "package": "uk.bobbytables.jeidsi.core.compat.twilightforest",
+  "plugin": "uk.bobbytables.jeidsi.core.compat.twilightforest.TwilightForestPlugin",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(DEFAULT)",

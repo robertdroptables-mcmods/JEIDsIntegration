@@ -1,13 +1,13 @@
 {
   "package": "uk.bobbytables.jeidsi.core.init",
+  "plugin": "uk.bobbytables.jeidsi.core.init.InitPlugin",
   "required": true,
   "refmap": "mixins.jeidsi.refmap.json",
   "target": "@env(INIT)",
   "minVersion": "0.6",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "mixins.MixinLoaderEarly",
-    "mixins.MixinLoaderLate"
+    "mixins.MixinLoader"
   ],
   "injectors": {
     "maxShiftBy": 10

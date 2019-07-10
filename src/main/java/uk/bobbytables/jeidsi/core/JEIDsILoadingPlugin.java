@@ -17,7 +17,7 @@ public class JEIDsILoadingPlugin implements IFMLLoadingPlugin {
     
     public JEIDsILoadingPlugin() {
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.jeid.server.init.json"); // We NEED JEID's loader plugin on the server too
+        Mixins.addConfiguration("mixins.jeid.server.init.json"); // We NEED JEID's Loader plugin on the server too
         Mixins.addConfiguration("mixins.jeidsi.init.json");
     }
     

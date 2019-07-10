@@ -4,6 +4,8 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.chunk.Chunk;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.dimdev.jeid.INewChunk;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
@@ -14,8 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import zmaster587.advancedRocketry.AdvancedRocketry;
 import zmaster587.advancedRocketry.network.PacketBiomeIDChange;
 import zmaster587.libVulpes.util.HashedBlockPosition;
-
-import static uk.bobbytables.jeidsi.JEIDsI.LOGGER;
 
 @Mixin(PacketBiomeIDChange.class)
 public class MixinPacketBiomeIDChange {
@@ -73,6 +73,7 @@ public class MixinPacketBiomeIDChange {
     /**
      * @author sk2048
      */
+    @SideOnly(Side.CLIENT)
     @Overwrite(remap = false)
     public void executeClient(EntityPlayer thePlayer) {
         if (thePlayer.world.provider.getDimension() == worldId) {

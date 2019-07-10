@@ -12,7 +12,7 @@ import java.util.List;
  * Inject into loadMods BEFORE JEID does, adding our configs to the mixin environment it uses
  */
 @Mixin(value = Loader.class, priority = 500)
-public class MixinLoaderEarly {
+public class MixinLoader {
     @Inject(
             method = "loadMods",
             at = @At(value = "INVOKE", target = "Lnet/minecraftforge/fml/common/LoadController;transition(Lnet/minecraftforge/fml/common/LoaderState;Z)V", ordinal = 1),

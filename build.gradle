@@ -14,7 +14,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 def buildnumber = System.getenv('TRAVIS_BUILD_NUMBER')
 def suffix = buildnumber != null ? ".$buildnumber" : "-SNAPSHOT"
-version = "1.3.2$suffix"
+version = "1.3.3$suffix"
 group = "uk.bobbytables.jeidsi" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "jeidsi"
 
@@ -69,6 +69,7 @@ dependencies {
     compileOnly "2710:204:HammerCore-1.12.2-2.0.4.7@jar"
     compileOnly "2733:984:AdvancedRocketry-1.12.2-1.6.0-151-universal@jar"
     compileOnly "2731:147:LibVulpes-1.12.2-0.4.1-59-universal@jar"
+    compileOnly "2724:738:gaiadimension-1.12.2-1.0.5@jar"
 }
 
 mixin {

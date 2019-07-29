@@ -26,6 +26,7 @@ public class MixinLoader {
                 "mixins.jeidsi.creepingnether.json",
                 "mixins.jeidsi.cyclopscore.json",
                 "mixins.jeidsi.extrautils2.json",
+                "mixins.jeidsi.gaiadimension.json",
                 "mixins.jeidsi.hammercore.json",
                 "mixins.jeidsi.tofucraft.json",
                 "mixins.jeidsi.thebetweenlands.json",

@@ -28,6 +28,7 @@ public class MixinLoader {
                 "mixins.jeidsi.extrautils2.json",
                 "mixins.jeidsi.gaiadimension.json",
                 "mixins.jeidsi.hammercore.json",
+                "mixins.jeidsi.journeymap.json",
                 "mixins.jeidsi.tofucraft.json",
                 "mixins.jeidsi.thebetweenlands.json",
                 "mixins.jeidsi.tropicraft.json",

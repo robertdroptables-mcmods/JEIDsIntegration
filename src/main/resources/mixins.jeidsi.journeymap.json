@@ -1,0 +1,11 @@
+{
+  "package": "uk.bobbytables.jeidsi.core.compat.journeymap",
+  "required": true,
+  "refmap": "mixins.jeidsi.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.6",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "mixins.MixinChunkMD"
+  ]
+}

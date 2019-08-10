@@ -17,7 +17,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 def buildnumber = System.getenv('TRAVIS_BUILD_NUMBER')
 def suffix = buildnumber != null ? ".$buildnumber" : "-SNAPSHOT"
-version = "1.3.4$suffix"
+version = "1.3.5$suffix"
 group = "uk.bobbytables.jeidsi" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "jeidsi"
 

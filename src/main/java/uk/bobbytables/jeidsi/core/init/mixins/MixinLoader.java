@@ -22,6 +22,7 @@ public class MixinLoader {
         Mixins.addConfigurations(
                 "mixins.jeidsi.abyssalcraft.json",
                 "mixins.jeidsi.advancedrocketry.json",
+                "mixins.jeidsi.dimstack.json",
                 "mixins.jeidsi.bookshelf.json",
                 "mixins.jeidsi.creepingnether.json",
                 "mixins.jeidsi.cyclopscore.json",

@@ -1,6 +1,8 @@
 # JustEnoughIDs Integration [![Build Status](https://travis-ci.org/robertdroptables-mcmods/JEIDsIntegration.svg?branch=master)](https://travis-ci.org/robertdroptables-mcmods/JEIDsIntegration) [![CurseForge](http://cf.way2muchnoise.eu/318572.svg)](https://www.curseforge.com/minecraft/mc-mods/justenoughids-integration-jeidsi)
 This mod exists to improve the compatibility between JustEnoughIDs and other mods. Currently focussed on fixing issues arising as a result of biome IDs being extended.
 
+At the present time all fixed provided by this mod have been integrated into JEID. This mod is no longer necessary and will cause crashes if not removed when updating JEID to 1.0.3.
+
 ## Mod Support Extended
 * Abyssalcraft (only >1.9.6)
 * Advanced Rocketry
